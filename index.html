@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Preencha a lista de compras">
+    <title>Lista de compras</title>
+    <link rel="stylesheet" href="/exercicioAula0810/src/css/style.css">
+</head>
+<body>
+    <main>
+        <header class="wrapper">
+            <h1>
+                Lista de compras
+            </h1>
+            <p aria-hidden="true" id="description">
+                Insira itens na lista
+            </p>
+        </header>
+        <form class="form" aria-label="formulário para inserir itens na lista">
+            <label >
+                Digite item para adicionar a lista
+            </label>
+            <input type="text" id="inputList" placeholder="Digite item">
+            <span class="helpText"></span>
+            <button type="submit" id="addListBtn">
+                Inserir item
+            </button>          
+        </form>
+        <ul class="list">   
+            
+        </ul>
+    </main>
+
+    <script src="/exercicioAula0810/src/js/script.js" type="module"></script>
+</body>
+</html>
