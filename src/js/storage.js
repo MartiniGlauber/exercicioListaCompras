@@ -1,4 +1,4 @@
-import { addItemToList } from "./utilsFunctions";
+import { addItemToList } from "./utilsFunctions.js";
 
 export function loadItems(){
     const storedItems = JSON.parse(localStorage.getItem('items')) || [];

@@ -1,5 +1,6 @@
-const list = document.querySelector(".list");
-const helpText = document.querySelector(".helpText");
+import { helpText, input, list } from "./constants.js";
+import { removeItem } from "./storage.js";
+
 
 export function addItemToList(inputValue) {
     let li = document.createElement("li");
@@ -25,7 +26,7 @@ export function addItemToList(inputValue) {
     });
   }
 
-  export function validaInput(input) {
+  export function validateInput(input) {
     if (input.value == "") {
       insertMessage("É necessário incluir um item");
       input.style.border = "2px solid red";
@@ -38,6 +39,10 @@ export function addItemToList(inputValue) {
     let items = Array.from(list.querySelectorAll("li")).map((li) =>
       li.firstChild.nodeValue.trim()
     );
+    return checkForDuplicate(items, value);
+  }
+
+  function checkForDuplicate(items, value){  
     if (items.includes(value)) {
       insertMessage("Item repetido");
       input.style.border = "2px solid red";
